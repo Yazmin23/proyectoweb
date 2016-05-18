@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+ <head>
+ <meta charset="UTF-8">
+ <title>API de vibración</title>
+ </head>
+ <body>
+    <script>
+        if (window.navigator && window.navigator.vibrate) {
+document.querySelector("#vibrar").addEventListener("click", function () {
+navigator.vibrate(1000);
+}, false);
+document.querySelector("#vibrar-dos").addEventListener("click", function () {
+navigator.vibrate([200, 100, 200, 100]);
+}, false);
+document.querySelector("#vibrar-mucho").addEventListener("click", function () {
+navigator.vibrate(10000);
+}, false);
+document.querySelector("#vibrar-off").addEventListener("click", function () {
+navigator.vibrate(0);
+}, false);
+}
+else {
+alert("Tu dispositivo no soporta la API de vibración");
+}
+    </script>
+ <a href="#" src="ma3.jpg" id="vibrar">1</a>
+ <a href="#"src="ma3.jpg" id="vibrar-dos">2</a>
+ <a href="#" src="ma3.jpg" id="vibrar-mucho">3</a>
+ <a href="#" src="ma3.jpg" id="vibrar-off">Apagar</a>
+ </body>
+</html>
